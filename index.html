@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <header class="container mx-auto">
+        <div class="navbar bg-base-100 shadow-lg">
+            <a class="btn btn-ghost normal-case text-xl">Where in the world?</a>
+
+        </div>
+    </header>
+    <div class="grid  grid-cols-2 mt-5 text-center">
+        <div>
+            <input class="bg-slate-100 outline outline-indigo-100 rounded-md py-3" type="text">
+            <button class="btn btn-primary">Search</button>
+        </div>
+        <div class="ml-12">
+            <select onchange="loadCountry()" id="country-region" class="select select-info w-full max-w-xs">
+                <option disabled selected>Filter by Region</option>
+                <option>Africa</option>
+                <option>America</option>
+                <option>Asia</option>
+                <option>Europe</option>
+                <option>Oceania</option>
+            </select>
+        </div>
+    </div>
+
+    <section class="mt-12 container mx-auto">
+        <div id="country-container" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+
+        </div>
+
+        <div class="text-end lg:px-12 mt-10">
+            <button onclick="showAllDataTogether()" class="btn btn-primary my-4">
+                See ALL
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
